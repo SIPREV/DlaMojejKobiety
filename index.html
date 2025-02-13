@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Strona zrobiona dla mojej dziewczyny na Walentynki">
+        <meta property="og:title" content="Walentynki">
+        <meta property="og:description" content="Strona zrobiona dla mojej dziewczyny na Walentynki">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1280">
+        <meta property="og:image:height" content="675">
+        <meta property="og:image:alt" content="Dla Mojej Tynkiii.">
+        <meta property="og:image" content="https://kudos.wiki/screenshot.png">
+        <link rel="icon" href="/logo.svg" type="image/svg+xml">
+        <link rel="icon" href="/favicon.ico" sizes="32x32">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <title>Dla Mojej Tynki</title>
+        <link rel="preload" as="font" type="font/woff2" href="/font/fraunces-italic.woff2" crossorigin fetchpriority="high">
+        <link rel="preload" as="font" type="font/woff2" href="/font/RobotoMono.woff2" crossorigin fetchpriority="high">
+        <link rel="preload" as="image" href="/img/dotnoise.png" crossorigin fetchpriority="high">
+        <link rel="preload" as="image" href="/img/flowers2-mobile.webp" media="(max-width: 450px)" fetchpriority="high">
+        <link rel="preload" as="image" href="/img/flowers2.webp" media="(min-width: 451px)" fetchpriority="high">
+        <link rel="preload" as="font" type="font/woff2" href="/font/fraunces-regular.woff2" crossorigin>
+        <style>
+            @font-face {
+                font-display: swap;
+                font-family: Roboto Mono;
+                font-style: normal;
+                font-weight: 100 700;
+                src: url(/font/RobotoMono.woff2) format("woff2")
+            }
+
+            @font-face {
+                font-display: block;
+                font-family: fraunces-italic;
+                font-weight: 100 900;
+                src: url(/font/fraunces-italic.woff2) format("woff2")
+            }
+
+            [hidden] {
+                display: none
+            }
+
+            * {
+                box-sizing: border-box
+            }
+
+            :root {
+                --font-color: #3e0a0a;
+                --font-mono: "Roboto Mono",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,"DejaVu Sans Mono",monospace;
+                font-family: var(--font-mono);
+                --border-radius: 6px;
+                color: var(--font-color);
+                font-size: 1rem;
+                line-height: 1.45
+            }
+
+            body {
+                background-color: #f4deda;
+                background-image: url(/img/dotnoise.png);
+                margin: unset;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale
+            }
+
+            h1,h3 {
+                font-family: fraunces-italic
+            }
+
+            p {
+                overflow-wrap: break-word
+            }
+
+            img,video {
+                display: block;
+                height: auto;
+                max-width: 100%
+            }
+
+            video {
+                width: 100%
+            }
+
+            main video {
+                block-size: 100%;
+                box-shadow: 4px 4px 18px 1px #c39b9b;
+                inline-size: 100%;
+                object-fit: cover
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: repeat(13,1fr);
+                grid-template-rows: repeat(15,1fr);
+                height: 100vh
+            }
+
+            h1 {
+                color: #c82929;
+                font-size: 5.65rem;
+                font-variation-settings: "opsz" 70,"wght" 600,"SOFT" 0,"WONK" 1;
+                grid-area: 6/2/11/11;
+                line-height: 1.1;
+                margin: 0;
+                padding-inline-start:50px;text-shadow: 1px 1px #ff5f5f,0 2px #881616;
+                z-index: 3
+            }
+
+            h2 {
+                color: #712525;
+                font-size: 1.4rem;
+                font-weight: 400;
+                grid-area: 2/8/6/13;
+                letter-spacing: -.006em;
+                line-height: 1.4;
+                text-align: center;
+                text-wrap: balance;
+                z-index: 1
+            }
+
+            h3 {
+                font-size: 1.7rem
+            }
+
+            .div1 {
+                grid-area: 2/1/5/3
+            }
+
+            .div1 video {
+                border-radius: 64% 6% 0 5%/6% 100% 92% 93%
+            }
+
+            .div1 img {
+                box-shadow: 8px -3px 18px 1px #ce9898
+            }
+
+            .div2 {
+                grid-area: 2/10/7/13
+            }
+
+            .div2 video {
+                border-radius: 5% 10% 53% 7%/4% 90% 4% 100%
+            }
+
+            .div3 {
+                grid-area: 1/4/4/9
+            }
+
+            .div3 video {
+                border-radius: 2% 77% 2% 1%/64% 11% 100% 23%
+            }
+
+            .div4 {
+                grid-area: 11/2/16/6;
+                z-index: 2
+            }
+
+            .div4 video {
+                border-radius: 3% 100% 4% 2%/84% 8% 100% 23%
+            }
+
+            .div5 {
+                grid-area: 10/8/14/14;
+                z-index: 1
+            }
+
+            .div5 video {
+                border-radius: 1% 88% 0 2%/19% 0 78% 44%
+            }
+
+            .div5:after {
+                background-image: url(/img/sun.png);
+                background-position: 100%;
+                bottom: -173px;
+                content: "";
+                height: 340px;
+                position: absolute;
+                right: 50px;
+                width: 340px
+            }
+
+            .div5:after,.div6 {
+                background-repeat: no-repeat;
+                background-size: contain
+            }
+
+            .div6 {
+                background-image: url(/img/flowers.png);
+                grid-area: 1/12/4/14;
+                z-index: 1
+            }
+
+            .div7 {
+                grid-area: 5/4/16/11;
+                mix-blend-mode: color-burn;
+                opacity: .9
+            }
+
+            .div7 img {
+                border-radius: 50%;
+                height: 100%;
+                object-fit: cover
+            }
+
+            .tagline {
+                display: grid;
+                grid-template-columns: repeat(15,1fr);
+                grid-template-rows: repeat(5,1fr)
+            }
+
+            .tagline,div>a+p {
+                position:relative
+            }
+
+
+            div>a+p {
+                color: #712525;
+                font-size: .8rem;
+                margin-block:5px;padding-inline:5px;text-align: right;
+                z-index: 1
+            }
+
+            strong {
+                font-weight: 700;
+                letter-spacing: .04em
+            }
+
+            .planet1 {
+                grid-area: 2/3/5/6;
+                position: relative
+            }
+
+            .planet1:after {
+                background-image: url(/img/satan.png);
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                bottom: 0;
+                content: "";
+                height: 100%;
+                left: 280px;
+                position: absolute;
+                width: 96px
+            }
+
+            .wide-screen-cap {
+                margin-inline-end:auto;margin-inline-start:auto;max-width: 1680px
+            }
+
+            @media (min-width: 1650px) {
+                h1 {
+                    font-size:7rem
+                }
+            }
+
+            @media screen and (max-width: 811px) {
+                main {
+                    grid-template-rows:repeat(18,1fr)
+                }
+
+                .planet1 {
+                    grid-area: 4/1/5/8
+                }
+
+                .planet1:after {
+                    bottom: 0;
+                    left: 100%;
+                    width: 70px
+                }
+
+                .tagline {
+                    grid-template-rows: repeat(4,120px)
+                }
+
+                h1 {
+                    font-size: 2.3rem;
+                    grid-area: 9/1/13/14;
+                    margin-block:20px;padding-inline:5px}
+
+                h2 {
+                    font-size: 1.1rem;
+                    grid-area: 2/2/4/14;
+                    z-index: 2
+                }
+
+                .div1 {
+                    grid-area: 4/1/7/7
+                }
+
+                .div2 {
+                    grid-area: 5/9/8/14
+                }
+
+                .div3 {
+                    grid-area: 1/3/3/10
+                }
+
+                .div4 {
+                    grid-area: 14/1/19/7
+                }
+
+                .div5 {
+                    grid-area: 13/8/17/14
+                }
+
+                .div5:after {
+                    bottom: -147px;
+                    height: 220px;
+                    right: 0;
+                    width: 220px
+                }
+
+                .div5 video {
+                    object-position: left
+                }
+
+                .div6 {
+                    grid-area: 1/9/4/14
+                }
+
+                .div7 {
+                    grid-area: 9/2/19/14
+                }
+
+                div>a+p {
+                    font-size: .65rem
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="wide-screen-cap">
+            <h1>
+                Dla Mojej Tynkii <br>Na Walentynki 
+            </h1>
+            <picture class="div7">
+                <source type="image/jpeg" media="(min-width: 451px)" srcset="/img/kino.jpg">
+                <img width="923" height="707" src="/img/kino.jpg" alt>
+            </picture>
+            <div class="div1">
+                <a href="https://en.wikipedia.org/wiki/Loveless_(film)" aria-label="Read the Wikipedia article of Loveless film">
+                    <video loop muted autoplay aria-label="A man dressed in black covering his face crying while crouching down.">
+                        <source src="media/morze.webm" type="video/webm">
+                        <source src="media/morze.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <p>
+                    <strong>Sylwester nad Morzem</strong>
+                    · 2025, Brzeźno
+                </p>
+            </div>
+            <div class="div2">
+                <a href="https://en.wikipedia.org/wiki/Paris,_Texas_(film)" aria-label="Read the Wikipedia article of Paris, Texas film">
+                    <video loop muted autoplay aria-label="A woman dressed in red sweater roll up her eyes. Background has a flickering TV at top-left.">
+                        <source src="img/kino.webm" type="video/webm">
+                        <source src="media/kino.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <p>
+                    <strong>Kino na Vaiana</strong>
+                    · 2024, Janki
+                </p>
+            </div>
+            <div class="div3">
+                <a href="https://en.wikipedia.org/wiki/The_Territory_(2022_film)" aria-label="Read the Wikipedia article of The Territory film">
+                    <video loop muted autoplay aria-label="Many yellow colored butterfly flying.">
+                        <source src="media/my.mp4" type="video/webm">
+                        <source src="media/my.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <p>
+                    <strong>Most Zakochanych</strong>
+                    · 2024, Bydgoszcz
+                </p>
+            </div>
+            <div class="div4">
+                <a href="https://en.wikipedia.org/wiki/Persona_(1966_film)" aria-label="Read the Wikipedia article of Persona film">
+                    <video loop muted autoplay aria-label="A black and white scene of a young man moving his right hand on a huge screen showing a face of an woman.">
+                        <source src="media/smoczki.webm" type="video/webm">
+                        <source src="media/smoczki.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <p>
+                    <strong>Nasze Smoczkiii</strong>
+                    · 2024, Wólka Kozodawska
+                </p>
+            </div>
+            <div class="div5">
+                <a href="https://en.wikipedia.org/wiki/Jigarthanda_DoubleX" aria-label="Read the Wikipedia article of Kigarthanda Doublex film">
+                    <video loop muted autoplay>
+                        <source src="media/pluszaki.webm" type="video/webm">
+                        <source src="media/pluszaki.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <p>
+                    <strong>Nasze Dzieci haha</strong>
+                    · 2024, Stockstad am Main
+                </p>
+            </div>
+            <div class="div6"></div>
+        </main>
+        <section class="tagline">
+            <h2>Nasze Pierwsze spotkanie byłaś zdziwiona że kupiłem ci naszą Lamke i bardzo się z niej cieszyłaś hah mimo że przyjechałem bradzo spóźnony ale mimo tego każdy z nas był zadowolony z tego spotkania i mam nadzieje że nigdy tego nie zpomnimy.</h2>
+            <div class="planet1">
+                <video width="270" height="284" loop muted autoplay>
+                    <source src="media/lamka.webm" type="video/webm">
+                </video>
+            </div>
+        </section>
+        <section id="interlude">
+            <div>
+                <button id="play-soundtrack" aria-label="Play audio">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff87" viewBox="0 -960 960 960">
+                        <path d="M320-200v-560l440 280z"/>
+                    </svg>
+                </button>
+                <button id="pause-soundtrack" aria-label="Pause audio" hidden>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff87" viewBox="0 -960 960 960">
+                        <path d="M520-200h240v-560H520zm-320 0h240v-560H200z"/>
+                    </svg>
+                </button>
+                <audio id="soundtrack" preload="none" src="media/zaplontani.mp4"></audio>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=JGb0HTaWSa8" aria-label="Pioseneczka">
+                    <video width="600" height="310" loop muted autoplay style="max-width:600px" aria-label="A man shaking hand with a prosthetic hand held by another man. Background is an ocean.">
+                        <source src="media/zaplontani.webm" type="video/webm">
+                        <source src="media/zaplontani.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <p>
+                    <strong>"Kiedy jesteś tu"</strong>
+                    · Zaplątani
+                </p>
+            </div>
+        </section>
+        <section style="align-items:flex-end;display:flex;flex-wrap:wrap-reverse;gap:100px;justify-content:center;position:relative">
+            <div class="planet2">
+                
+            </div>
+            <article>
+                <p>
+                    Ta fotka przypomniała jak okleiłaś mi autko oraz mnie hahah no cudowna sytuacja kochanie mam nadzieje że wymyślisz więcej takich rzeczy 
+                </p>
+                <p>
+                    Normalnie przypomina mi się jak jeżdziliśmy po twoich okolicach najpierw szukaliśmy żabki przez dłuższy czas ale chyba na końcu pojechaliśmy na maczka
+                </p>
+                <p>
+                    Przez takie dłuższe chwile jak robię tą stronke wszystko mi się przypomina każde chwile spędzone z tobą normalnie jak pokazujesz mi to wszystko od nowa :D nawet pokazałaś mi dobre jedzenie (to jest rzadkość haha) i również mi posmakowało 
+                </p>
+                <img loading="lazy" width="250" height="209" class="me-you" alt aria-hidden="true" src="img/oczko.jfif">
+                <p>
+                    OJ KOCHANIE KOCHANIE
+                    cały czas pamiętam jak mi wkęciłaś na początku że masz szare oczka hahaha no dałem się na to złapać nie powiem, ale patrząc cały czaś na te twoje piękne niebieskie oczka zakochałem się jeszcze raz  no nie uwierzysz ale zakochałem się w tobie tyle razy od nowa że to szok
+                </p>
+            </article>
+            <img style="flex-basis:300px;margin-block-start:80px;object-fit:contain" width="423" height="376" alt aria-hidden="true" src="img/okleione.jpg">
+        </section>
+        <section id="pricing">
+            
+        </section>
+        <section class="faq wide-screen-cap">
+            <h3>Dla ciebie Kochanie</h3>
+            <a class="preview" href="zostaniesz.html">
+                Zostaniesz <span>MOJĄ</span>
+                Walentynką?
+            </a>
+            <br>
+            <br>
+            <a class="preview" href="galeria.html">
+                Nasza <span>GALERIA</span>
+                Fotek
+            </a>
+            </details>
+        </section>
+        <footer>
+            
+                <div style="flex:1;margin-block-end:20px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="39" fill="none" viewBox="0 0 133 175">
+                        <path fill="#C82929" d="M0 0h133v175H0z"/>
+                    </svg>
+                    <p style="margin-block-end:25px">
+                        Made by SIPREV </a>
+                        . © 2025. This work is openly licensed via <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+                        . 
+                    </p>
+                    <ul>
+                        <li>
+                            <a >KOCHAM CIĘ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <style>
+            @font-face {
+                font-display: block;
+                font-family: fraunces;
+                font-weight: 100 900;
+                src: url(/font/fraunces-regular.woff2) format("woff2")
+            }
+
+            button {
+                appearance: none;
+                background: none;
+                border: 0 solid;
+                cursor: pointer;
+                font: inherit
+            }
+
+            .preview,button {
+                color: inherit;
+                font-family: fraunces
+            }
+
+            .preview span,.pro span {
+                font-family: var(--font-mono);
+                font-variation-settings: "wght" 450
+            }
+
+            .preview,.pro {
+                border-radius: var(--border-radius);
+                font-size: 1.25rem;
+                font-variation-settings: "opsz" 60,"wght" 350,"SOFT" 0,"WONK" 0;
+                mix-blend-mode: color-burn;
+                padding: 10px 20px;
+                transition: box-shadow .2s ease-in
+            }
+
+            .pro span:first-child {
+                font-family: fraunces-italic;
+                font-size: 1.45rem;
+                font-variation-settings: "opsz" 100,"wght" 400,"SOFT" 100,"WONK" 0
+            }
+
+            .pro {
+                background: linear-gradient(180deg,#275cff 0,#0049d5);
+                box-shadow: inset 0 1px 0 hsla(0,0%,100%,.75),1px 3px 7px #2f5f90,1px 2px 50px #7a8fd2;
+                color: #fff;
+                text-shadow: 0 -1px 0 rgba(0,1,67,.29)
+            }
+
+            .pro:active {
+                background: linear-gradient(180deg,#0049d5 0,#275cff);
+                transform: translateY(1px)
+            }
+
+            .pro:hover {
+                box-shadow: inset 0 1px 0 hsla(0,0%,100%,.75),1px 3px 4px #2f5f90,1px 2px 80px #526ec5
+            }
+
+            .preview {
+                border: 1px solid #e29292;
+                box-shadow: 0 4px 5px #b96662,1px 2px 50px #ffc0c0;
+                text-decoration: none
+            }
+
+            .preview:hover {
+                box-shadow: 0 3px 3px #b96662,1px 2px 80px #f49393
+            }
+
+            .preview:active {
+                background: linear-gradient(180deg,#f0c9ff 0,#fff);
+                transform: translateY(1px)
+            }
+
+            summary {
+                color: var(--font-color);
+                cursor: pointer;
+                font-size: 1.1rem;
+                font-weight: 600;
+                user-select: none
+            }
+
+            details[open=""] summary {
+                padding-block-end:4px}
+
+            details[open=""] {
+                padding-block-end:20px}
+
+            details[open=""] *+* {
+                margin-block-start:23px}
+
+            details {
+                margin-block-end:8px;max-width: 65ch
+            }
+
+            details>p {
+                padding-inline-start:15px}
+
+            details p:first-of-type {
+                margin-block-start:0}
+
+            details p:last-of-type {
+                margin-block-end:0}
+
+            #interlude {
+                background-color: #e5718c;
+                background-image: url(/img/feathers.png);
+                clip-path: url(#wave);
+                display: flex;
+                gap: 30px;
+                justify-content: center;
+                margin-block-end:100px;padding-block-end:90px;padding-block-start:75px}
+
+            #interlude.gradient {
+                animation: gradientExpand .2s ease-in-out infinite alternate
+            }
+
+            #interlude>div:first-child {
+                align-self: flex-end;
+                margin-block-end:80px}
+
+            #interlude svg {
+                filter: drop-shadow(1px 2px 1px rgb(208,72,72))
+            }
+
+            #interlude p {
+                color: #ffd760;
+                text-shadow: 1px 1px 1px #b40065
+            }
+
+            #interlude video {
+                border-radius: 86% 77% 100% 2%/0 0 3% 100%
+            }
+
+            .planet2 {
+                position: absolute;
+                right: 3%;
+                top: -336px;
+                z-index: 1
+            }
+
+            .planet2:after {
+                background-image: url(/img/uranus.png);
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                bottom: -44px;
+                content: "";
+                height: 100%;
+                left: 124px;
+                position: absolute;
+                width: 108px
+            }
+
+            @keyframes gradientExpand {
+                0% {
+                    background: url(/img/feathers.png),radial-gradient(circle,#d08c9b 30%,#df6e88 70%)
+                }
+
+                to {
+                    background: url(/img/feathers.png),radial-gradient(circle,#d08c9b 27%,#df6e88 60%)
+                }
+            }
+
+            article {
+                font-size: 1.1rem;
+                letter-spacing: -.003em;
+                margin-block-end:90px;max-width: 55ch
+            }
+
+            article *+* {
+                margin-block-start:30px}
+
+            .faq {
+                margin-block-end:100px;padding-inline-start:80px}
+
+            footer {
+                background-color: #00000009;
+                background-image: url(/img/arches.png);
+                border-radius: 100% 100% 9% 2%/9% 5% 0 0;
+                font-size: .9rem;
+                padding: 60px 30px 10px;
+                position: relative
+            }
+
+            footer>div {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px
+            }
+
+            footer:after {
+                background-image: url(/img/rocket.png);
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                height: 303px;
+                position: absolute;
+                right: 0;
+                top: -264px;
+                width: 383px
+            }
+
+            footer ul {
+                font-size: .85rem;
+                list-style: none;
+                padding: 0
+            }
+
+            footer ul li {
+                float: left
+            }
+
+            footer ul li:not(:last-child):after {
+                content: "·";
+                margin-inline:6px}
+
+            #pricing {
+                align-items: flex-start;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: center;
+                margin-block-end:140px}
+
+            #pricing>div>p {
+                color: #3e0a0a8f;
+                font-size: .8rem;
+                font-weight: 425;
+                margin-block-start:11px;text-align: right
+            }
+
+            .me-you {
+                animation: bounce .4s ease-in-out infinite;
+                margin: 0 auto
+            }
+
+            @keyframes bounce {
+                0%,to {
+                    transform: rotate(0deg)
+                }
+
+                50% {
+                    transform: rotate(.5deg)
+                }
+            }
+
+            @media screen and (max-width: 811px) {
+                .planet2 {
+                    left:13%;
+                    top: 23%
+                }
+
+                .planet2 img {
+                    height: 223px;
+                    object-fit: contain;
+                    width: 200px
+                }
+
+                article {
+                    font-size: medium;
+                    margin-block-end:60px}
+
+                .faq,article {
+                    padding-inline:15px}
+
+                .faq {
+                    margin-block-end:150px}
+
+                summary {
+                    font-size: medium
+                }
+
+                #pricing {
+                    gap: 25px;
+                    margin-block-end:100px;padding-inline:10px}
+
+                .preview,.pro {
+                    font-size: medium
+                }
+
+                #interlude {
+                    flex-wrap: wrap-reverse;
+                    gap: 0;
+                    margin-block-end:0}
+
+                #interlude>div:nth-child(2) {
+                    padding: 0
+                }
+
+                #interlude>div:first-child {
+                    margin-block-end:30px}
+
+                #interlude p {
+                    font-size: .8rem;
+                    margin-block:20px;text-align: center
+                }
+
+                footer {
+                    border-radius: 100% 100% 9% 2%/5% 3% 0 0;
+                    padding-inline:20px}
+
+                footer>div {
+                    flex-wrap: wrap-reverse
+                }
+
+                footer:after {
+                    background-position: 100%;
+                    height: 168px;
+                    top: -146px;
+                    width: 239px
+                }
+            }
+        </style>
+        <script type="module">
+            window.addEventListener("load", (async e => {
+                function t() {
+                    window.soundtrack.paused && (window.soundtrack.play(),
+                    window["play-soundtrack"].setAttribute("hidden", !0),
+                    window["pause-soundtrack"].removeAttribute("hidden"))
+                }
+                function n() {
+                    window.soundtrack.paused || (window.soundtrack.pause(),
+                    d())
+                }
+                function d() {
+                    window["pause-soundtrack"].setAttribute("hidden", !0),
+                    window["play-soundtrack"].removeAttribute("hidden"),
+                    window.interlude.classList.remove("gradient")
+                }
+                function a(e, t, n="", d=!1) {
+                    const a = document.createElement("link");
+                    a.rel = "prefetch",
+                    a.href = e,
+                    a.as = t,
+                    n && (a.type = n),
+                    d && (a.crossOrigin = ""),
+                    document.head.appendChild(a)
+                }
+                await new Promise((e => {
+                    const t = document.createElement("script");
+                    t.src = "https://cdn.paddle.com/paddle/v2/paddle.js",
+                    t.async = !0,
+                    t.onload = e,
+                    document.body.appendChild(t)
+                }
+                )),
+                Paddle.Initialize({
+                    token: "live_beb5f6d24cbba73355ae9864b56",
+                    eventCallback: function({name: e, data: t}) {
+                        "checkout.completed" === e && (localStorage.setItem("email", t.customer.email),
+                        localStorage.setItem("new_purchase", 1))
+                    }
+                }),
+                window.oneTimePurchase = [{
+                    priceId: "pri_01j9dzrhm9w0gd8nygaj7fc89g",
+                    quantity: 1
+                }],
+                window.openCheckout = e => {
+                    Paddle.Checkout.open({
+                        settings: {
+                            successUrl: "https://kudos.wiki/activate"
+                        },
+                        items: e
+                    })
+                }
+                ,
+                window["play-soundtrack"].addEventListener("click", t),
+                window["pause-soundtrack"].addEventListener("click", n),
+                window.soundtrack.addEventListener("ended", ( () => d())),
+                window.soundtrack.addEventListener("playing", ( () => window.interlude.classList.add("gradient"))),
+                "mediaSession"in navigator && (navigator.mediaSession.setActionHandler("play", t),
+                navigator.mediaSession.setActionHandler("pause", n)),
+                a("/js/custom-select.bc5eb9c9.js", "script"),
+                a("/js/app.ab1fef36.js", "script"),
+                a("/preview.csv", "fetch", "text/csv", !0)
+            }
+            ));
+        </script>
+        <svg aria-hidden="true" style="height:0;position:absolute;width:0">
+            <defs>
+                <clipPath id="wave" clipPathUnits="objectBoundingBox">
+                    <path d="M0 .19q.02-.05.04 0t.04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0 .04 0V1Q.95.88.9.85t-.1 0-.1 0-.1 0-.1 0-.1 0-.1 0-.1 0-.1 0-.1 0V0Z"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </body>
+</html>
